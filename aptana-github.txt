@@ -1,0 +1,5 @@
+1 New project - clone from github
+
+2 Make changes
+
+3 Project right-click > Team > Stage, Commit, Push. In that order!
