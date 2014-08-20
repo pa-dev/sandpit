@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+		<script src="js/d3.min.js"></script>
+		<script src="js/dimple.v2.1.0.min.js"></script>
+
+		<style>
+			svg {
+				shape-rendering: crispEdges;
+			}
+			
+			svg.tick{
+				stroke: red;			
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="chartContainer">
+
+			<script type="text/javascript">
+				var svg = dimple.newSvg("#chartContainer", 700, 200), parseDate = d3.time.format("%d-%m-%Y").parse;
+
+				//d3.tsv("example_data.tsv", function(data) {
+				d3.csv("data-gdp-time.csv", function(data) {
+					console.log(data);
+					var myChart = new dimple.chart(svg, data);
+					console.log(myChart);
+					myChart.setBounds(60, 30, 510, 105);
+					//var x = myChart.addCategoryAxis("x", "name");
+					var x = myChart.addTimeAxis("x", "name", "%d/%m/%Y", "%b %Y");
+					x.showGridlines = true;
+					x.floatingBarWidth = 5;
+					x.timePeriod = d3.time.years;
+					x.timeInterval = 1;
+					console.log(x);
+					//x.addOrderRule("Date");
+					myChart.addMeasureAxis("y", "value");
+					myChart.addSeries(null, dimple.plot.bar);
+					myChart.draw();
+
+					
+				});
+			</script>
+		</div>
+
+	</body>
+</html>
