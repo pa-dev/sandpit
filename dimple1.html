@@ -6,45 +6,168 @@
 		<script src="js/dimple.v2.1.0.min.js"></script>
 
 		<style>
-			svg {
+		body{
+			font: 1em sans-serif;
+			color: #555;
+		}
+		h3{
+			margin: 5px;
+			font-size: 90%;
+			
+		}
+			.chartgroup{
+				box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+				width: 450px;
+			}
+			svg .dimple-bar, svg .dimple-axis, svg .domain {
 				shape-rendering: crispEdges;
 			}
-			
-			svg.tick{
-				stroke: red;			
+
+			.tick line, .domain {
+				stroke: #dfdfdf !important;
+			}
+			rect:hover {
+				opacity: 1;
+			}
+			rect1.dimple-bar {
+				fill: #03a9f4;
+				stroke: none;
 			}
 		</style>
 	</head>
 
 	<body>
-
-		<div id="chartContainer">
-
-			<script type="text/javascript">
-				var svg = dimple.newSvg("#chartContainer", 700, 200), parseDate = d3.time.format("%d-%m-%Y").parse;
-
-				//d3.tsv("example_data.tsv", function(data) {
-				d3.csv("data-gdp-time.csv", function(data) {
-					console.log(data);
-					var myChart = new dimple.chart(svg, data);
-					console.log(myChart);
-					myChart.setBounds(60, 30, 510, 105);
-					//var x = myChart.addCategoryAxis("x", "name");
-					var x = myChart.addTimeAxis("x", "name", "%d/%m/%Y", "%b %Y");
-					x.showGridlines = true;
-					x.floatingBarWidth = 5;
-					x.timePeriod = d3.time.years;
-					x.timeInterval = 1;
-					console.log(x);
-					//x.addOrderRule("Date");
-					myChart.addMeasureAxis("y", "value");
-					myChart.addSeries(null, dimple.plot.bar);
-					myChart.draw();
-
-					
-				});
-			</script>
+		<div class="chartgroup">
+			<h3>National Overview</h3>
+			<div id="chart-gdp"></div>
+			<div id="chart-inf"></div>
 		</div>
+		<div class="chartgroup">
+			<h3>Labour Market</h3>
+			<div id="chart-cr"></div>
+			<div id="chart-claimant"></div>
+		</div>
+		<div class="chartgroup">
+			<h3>Housing</h3>
+			<div id="chart-hp"></div>
+		</div>
+		<script type="text/javascript">
+			gdat = {};
+			var trans = 0.6;
+			var size = {
+				w : 450,
+				h : 120
+			};
+			var margins = {
+				left : 50,
+				top : 20,
+				right : size.w - 70,
+				bottom : size.h - 40
+			};
+			var colours = [new dimple.color("#40c4ff", "#03a9f4", trans)];
+			//var colours = [new dimple.color("#03a9f4", "#03a9f4", trans)];
+			//var colours = [new dimple.color("#40c4ff", "#40c4ff", trans)];
+			var colours_multi = [new dimple.color("#40c4ff", "#03a9f4", trans), new dimple.color("#ffab40", "#ff9800", trans)];
+			var parseDate = d3.time.format("%d-%m-%Y").parse, svg_gdp = dimple.newSvg("#chart-gdp", size.w, size.h);
+			var svg_claimant = dimple.newSvg("#chart-claimant", size.w, size.h);
+			var svg_cr = dimple.newSvg("#chart-cr", size.w, size.h);
+			var svg_hp = dimple.newSvg("#chart-hp", size.w, size.h);
+			var svg_inf = dimple.newSvg("#chart-inf", size.w, size.h);
+
+			d3.csv("data-gdp-time3.csv", function(data) {
+				gdat = data;
+				console.log(data);
+
+				/*
+				 * gdp chart
+				 */
+				var data_gdp = dimple.filterData(data, "Quarter", ["1", "2", "3", "4"]);
+				var chart_gdp = new dimple.chart(svg_gdp, data_gdp);
+				chart_gdp.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				console.log(chart_gdp);
+
+				var x_gdp = chart_gdp.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_gdp.showGridlines = true;
+				x_gdp.floatingBarWidth = 7;
+				x_gdp.timePeriod = d3.time.years;
+				x_gdp.timeInterval = 1;
+				console.log(x_gdp);
+				var y_gdp = chart_gdp.addMeasureAxis("y", "Quarterly % Change");
+				y_gdp.tickFormat = "+p";
+				y_gdp.ticks = 5;
+				chart_gdp.addSeries(["Quarter"], dimple.plot.bar);
+				chart_gdp.defaultColors = colours;
+				chart_gdp.draw();
+
+				/*
+				 * inflation chart
+				 */
+				var data_inf = dimple.filterData(data, "Indicator", ["RPI", "CPI"]);
+				var chart_inf = new dimple.chart(svg_inf, data_inf);
+				chart_inf.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_inf = chart_inf.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_inf.showGridlines = true;
+				x_inf.timePeriod = d3.time.years;
+				x_inf.timeInterval = 1;
+				var y_inf = chart_inf.addMeasureAxis("y", "Inflation Annual % Change");
+				y_inf.ticks = 5;
+				chart_inf.addSeries("Indicator", dimple.plot.line);
+				chart_inf.defaultColors = colours_multi;
+				chart_inf.addLegend(60, size.h - 40, 500, 20, "left");
+				chart_inf.draw();
+				x_inf.tickFormat = "%b %Y";
+
+				/*
+				 * claimant chart
+				 */
+				var data_claimant = dimple.filterData(data, "Area", ["Lincolnshire"]);
+				var chart_claimant = new dimple.chart(svg_claimant, data_claimant);
+				chart_claimant.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_claimant = chart_claimant.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_claimant.showGridlines = true;
+				x_claimant.timePeriod = d3.time.years;
+				x_claimant.timeInterval = 1;
+				var y_claimant = chart_claimant.addMeasureAxis("y", "Claimants");
+				chart_claimant.addSeries(null, dimple.plot.area);
+				chart_claimant.defaultColors = colours;
+				chart_claimant.draw();
+				x_claimant.tickFormat = "%b %Y";
+
+				/*
+				 * claimant rate comparison chart
+				 */
+				var data_cr = dimple.filterData(data, "Area", ["Lincolnshire", "UK"]);
+				var chart_cr = new dimple.chart(svg_cr, data_cr);
+				chart_cr.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_cr = chart_cr.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_cr.showGridlines = true;
+				x_cr.timePeriod = d3.time.years;
+				x_cr.timeInterval = 1;
+				var y_cr = chart_cr.addMeasureAxis("y", "Claimant Rate");
+				chart_cr.addSeries("Area", dimple.plot.line);
+				chart_cr.defaultColors = colours_multi;
+				chart_cr.addLegend(60, size.h - 40, 500, 20, "left");
+				chart_cr.draw();
+				x_cr.tickFormat = "%b %Y";
+
+				/*
+				 * house price chart
+				 */
+				var data_hp = dimple.filterData(data, "Area", ["Lincolnshire"]);
+				var chart_hp = new dimple.chart(svg_hp, data_hp);
+				chart_hp.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_hp = chart_hp.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_hp.showGridlines = true;
+				x_hp.timePeriod = d3.time.years;
+				x_hp.timeInterval = 1;
+				var y_hp = chart_hp.addMeasureAxis("y", "Average House Price GBP");
+				chart_hp.addSeries(null, dimple.plot.area);
+				chart_hp.defaultColors = colours;
+				chart_hp.draw();
+				x_hp.tickFormat = "%b %Y";
+
+			});
+		</script>
 
 	</body>
 </html>
