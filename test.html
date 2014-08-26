@@ -1,49 +1,3617 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="utf-8">
-
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-		<title>test1</title>
-		<meta name="description" content="">
-		<meta name="author" content="Homer">
-
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.2/css/jquery.dataTables.min.c1ss">
+		
 	</head>
-
 	<body>
-		<div>
-			<header>
-				<h1>test1</h1>
-			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
 
-			<div>
-				<p>
-					this is a test
-				</p>
+		<!--<script src="/lro/toolkits/js/tablefilter/picnet.table.filter.min.js"></script>-->
+		<script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#table-schools').dataTable();
+			});
+		</script>
 
-			</div>
+		<table id="table-schools">
+			<thead>
+				<tr>
+					<th> DfE Code </th>
+					<th> Establishment </th>
+					<th> District Council </th>
+					<th> Main Phase </th>
+					<th> Sub Phase </th>
+					<th> Academy </th>
+					<th> Number on Roll (15/05/2014) </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td> 9251001 </td>
+					<td> Grantham Wyndham Park Nursery School </td>
+					<td> South Kesteven District Council </td>
+					<td> Nursery </td>
+					<td> Nursery </td>
+					<td> Maintained </td>
+					<td> 108 </td>
 
-			<footer>
-				<p>
-					&copy; Copyright  by Homer
-				</p>
-			</footer>
-		</div>
+				</tr>
+				<tr>
+					<td> 9251005 </td>
+					<td> Lincoln St Giles Nursery School </td>
+					<td> Lincoln City Council </td>
+					<td> Nursery </td>
+					<td> Nursery </td>
+					<td> Maintained </td>
+					<td> 121 </td>
+
+				</tr>
+				<tr>
+					<td> 9251010 </td>
+					<td> Lincoln Kingsdown Nursery School </td>
+					<td> Lincoln City Council </td>
+					<td> Nursery </td>
+					<td> Nursery </td>
+					<td> Maintained </td>
+					<td> 105 </td>
+
+				</tr>
+				<tr>
+					<td> 9251011 </td>
+					<td> Gainsborough Nursery School </td>
+					<td> West Lindsey District Council </td>
+					<td> Nursery </td>
+					<td> Nursery </td>
+					<td> Maintained </td>
+					<td> 108 </td>
+
+				</tr>
+				<tr>
+					<td> 9251012 </td>
+					<td> Boston Nursery School </td>
+					<td> Boston Borough Council </td>
+					<td> Nursery </td>
+					<td> Nursery </td>
+					<td> Maintained </td>
+					<td> 101 </td>
+
+				</tr>
+				<tr>
+					<td> 9251105 </td>
+					<td> The Lincolnshire Teaching and Learning Centre </td>
+					<td> Countywide </td>
+					<td> PRU </td>
+					<td> PRU </td>
+					<td> Maintained </td>
+					<td> 634 </td>
+
+				</tr>
+				<tr>
+					<td> 9251106 </td>
+					<td> Acorn Free School </td>
+					<td> Countywide </td>
+					<td> PRU </td>
+					<td> PRU </td>
+					<td> Free School- Alternative Provision </td>
+					<td> 49 </td>
+
+				</tr>
+				<tr>
+					<td> 9252000 </td>
+					<td> Skegness Junior Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Academy </td>
+					<td> 347 </td>
+
+				</tr>
+				<tr>
+					<td> 9252002 </td>
+					<td> Bassingham Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 209 </td>
+
+				</tr>
+				<tr>
+					<td> 9252003 </td>
+					<td> Billingborough Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 128 </td>
+
+				</tr>
+				<tr>
+					<td> 9252004 </td>
+					<td> Ingoldmells Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 125 </td>
+
+				</tr>
+				<tr>
+					<td> 9252005 </td>
+					<td> Mablethorpe Primary Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 323 </td>
+
+				</tr>
+				<tr>
+					<td> 9252006 </td>
+					<td> Lincoln Carlton Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 60 </td>
+
+				</tr>
+				<tr>
+					<td> 9252007 </td>
+					<td> Fishtoft School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 73 </td>
+
+				</tr>
+				<tr>
+					<td> 9252008 </td>
+					<td> Mercer's Wood Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 176 </td>
+
+				</tr>
+				<tr>
+					<td> 9252009 </td>
+					<td> Bracebridge Heath St Johns Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 398 </td>
+
+				</tr>
+				<tr>
+					<td> 9252010 </td>
+					<td> Boston Pioneers Free School Academy </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Free School </td>
+					<td> 55 </td>
+
+				</tr>
+				<tr>
+					<td> 9252012 </td>
+					<td> Caythorpe Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 138 </td>
+
+				</tr>
+				<tr>
+					<td> 9252013 </td>
+					<td> Corby Glen Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 100 </td>
+
+				</tr>
+				<tr>
+					<td> 9252015 </td>
+					<td> The Wainfleet Magdalen Church of England Methodist School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 196 </td>
+
+				</tr>
+				<tr>
+					<td> 9252017 </td>
+					<td> Digby The Tedder Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 75 </td>
+
+				</tr>
+				<tr>
+					<td> 9252019 </td>
+					<td> Eagle Community Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 76 </td>
+
+				</tr>
+				<tr>
+					<td> 9252020 </td>
+					<td> Grantham Huntingtower Community Primary Academy </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 362 </td>
+
+				</tr>
+				<tr>
+					<td> 9252025 </td>
+					<td> Helpringham School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 115 </td>
+
+				</tr>
+				<tr>
+					<td> 9252026 </td>
+					<td> Ingoldsby Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 44 </td>
+
+				</tr>
+				<tr>
+					<td> 9252028 </td>
+					<td> Langtoft Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 212 </td>
+
+				</tr>
+				<tr>
+					<td> 9252030 </td>
+					<td> Metheringham Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 238 </td>
+
+				</tr>
+				<tr>
+					<td> 9252031 </td>
+					<td> Nocton Community School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 48 </td>
+
+				</tr>
+				<tr>
+					<td> 9252033 </td>
+					<td> North Scarle Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 56 </td>
+
+				</tr>
+				<tr>
+					<td> 9252034 </td>
+					<td> Osbournby Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 103 </td>
+
+				</tr>
+				<tr>
+					<td> 9252038 </td>
+					<td> Sleaford Church Lane Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 230 </td>
+
+				</tr>
+				<tr>
+					<td> 9252039 </td>
+					<td> South Hykeham School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 140 </td>
+
+				</tr>
+				<tr>
+					<td> 9252041 </td>
+					<td> South Witham Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 98 </td>
+
+				</tr>
+				<tr>
+					<td> 9252046 </td>
+					<td> Thurlby Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 199 </td>
+
+				</tr>
+				<tr>
+					<td> 9252050 </td>
+					<td> Walcott Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 79 </td>
+
+				</tr>
+				<tr>
+					<td> 9252054 </td>
+					<td> Grantham Belton Lane Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 197 </td>
+
+				</tr>
+				<tr>
+					<td> 9252055 </td>
+					<td> Grantham Cliffedale Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 320 </td>
+
+				</tr>
+				<tr>
+					<td> 9252057 </td>
+					<td> North Hykeham Fosse Way Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 570 </td>
+
+				</tr>
+				<tr>
+					<td> 9252061 </td>
+					<td> Waddington Redwood Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 302 </td>
+
+				</tr>
+				<tr>
+					<td> 9252062 </td>
+					<td> Deeping St James Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 209 </td>
+
+				</tr>
+				<tr>
+					<td> 9252064 </td>
+					<td> North Hykeham Ling Moor Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 316 </td>
+
+				</tr>
+				<tr>
+					<td> 9252065 </td>
+					<td> Market Deeping Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 256 </td>
+
+				</tr>
+				<tr>
+					<td> 9252066 </td>
+					<td> Stamford The Bluecoat School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 205 </td>
+
+				</tr>
+				<tr>
+					<td> 9252067 </td>
+					<td> Skellingthorpe The Holt Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 183 </td>
+
+				</tr>
+				<tr>
+					<td> 9252070 </td>
+					<td> Grantham Belmont Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 199 </td>
+
+				</tr>
+				<tr>
+					<td> 9252072 </td>
+					<td> Bourne Westfield Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 630 </td>
+
+				</tr>
+				<tr>
+					<td> 9252074 </td>
+					<td> Branston Junior School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Academy </td>
+					<td> 152 </td>
+
+				</tr>
+				<tr>
+					<td> 9252075 </td>
+					<td> Heighington Millfield Primary Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 255 </td>
+
+				</tr>
+				<tr>
+					<td> 9252084 </td>
+					<td> Crowland South View Community Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 365 </td>
+
+				</tr>
+				<tr>
+					<td> 9252085 </td>
+					<td> Deeping St Nicholas Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 55 </td>
+
+				</tr>
+				<tr>
+					<td> 9252087 </td>
+					<td> Fleet Wood Lane School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 155 </td>
+
+				</tr>
+				<tr>
+					<td> 9252088 </td>
+					<td> Gedney Church End Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 65 </td>
+
+				</tr>
+				<tr>
+					<td> 9252089 </td>
+					<td> Gedney Drove End School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 47 </td>
+
+				</tr>
+				<tr>
+					<td> 9252090 </td>
+					<td> Gosberton Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 107 </td>
+
+				</tr>
+				<tr>
+					<td> 9252091 </td>
+					<td> Gosberton Clough and Risegate Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 75 </td>
+
+				</tr>
+				<tr>
+					<td> 9252092 </td>
+					<td> Holbeach Bank Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 45 </td>
+
+				</tr>
+				<tr>
+					<td> 9252093 </td>
+					<td> Holbeach Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 228 </td>
+
+				</tr>
+				<tr>
+					<td> 9252094 </td>
+					<td> Kirton Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 480 </td>
+
+				</tr>
+				<tr>
+					<td> 9252095 </td>
+					<td> Long Sutton Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 379 </td>
+
+				</tr>
+				<tr>
+					<td> 9252096 </td>
+					<td> Moulton Chapel Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 66 </td>
+
+				</tr>
+				<tr>
+					<td> 9252097 </td>
+					<td> Moulton The John Harrox Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 265 </td>
+
+				</tr>
+				<tr>
+					<td> 9252102 </td>
+					<td> Surfleet Seas End Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 79 </td>
+
+				</tr>
+				<tr>
+					<td> 9252104 </td>
+					<td> Sutton St James Community Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 89 </td>
+
+				</tr>
+				<tr>
+					<td> 9252105 </td>
+					<td> Lutton St Nicholas Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 75 </td>
+
+				</tr>
+				<tr>
+					<td> 9252107 </td>
+					<td> Shepeau Stow Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 67 </td>
+
+				</tr>
+				<tr>
+					<td> 9252109 </td>
+					<td> Spalding St Pauls Community Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 256 </td>
+
+				</tr>
+				<tr>
+					<td> 9252113 </td>
+					<td> Boston Hawthorn Tree School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 329 </td>
+
+				</tr>
+				<tr>
+					<td> 9252114 </td>
+					<td> Spalding Monkshouse Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 362 </td>
+
+				</tr>
+				<tr>
+					<td> 9252116 </td>
+					<td> Boston West Primary Academy </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 350 </td>
+
+				</tr>
+				<tr>
+					<td> 9252120 </td>
+					<td> Lincoln The Sir Francis Hill Community Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 443 </td>
+
+				</tr>
+				<tr>
+					<td> 9252122 </td>
+					<td> Lincoln Bracebridge Infant and Nursery School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 133 </td>
+
+				</tr>
+				<tr>
+					<td> 9252124 </td>
+					<td> Lincoln Monks Abbey Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 437 </td>
+
+				</tr>
+				<tr>
+					<td> 9252135 </td>
+					<td> Lincoln Woodlands Infant and Nursery School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 182 </td>
+
+				</tr>
+				<tr>
+					<td> 9252136 </td>
+					<td> Lincoln Manor Leas Junior School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Academy </td>
+					<td> 319 </td>
+
+				</tr>
+				<tr>
+					<td> 9252137 </td>
+					<td> Lincoln Manor Leas Infant School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 180 </td>
+
+				</tr>
+				<tr>
+					<td> 9252142 </td>
+					<td> Alford Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 337 </td>
+
+				</tr>
+				<tr>
+					<td> 9252145 </td>
+					<td> Brocklesby Park Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 17 </td>
+
+				</tr>
+				<tr>
+					<td> 9252146 </td>
+					<td> Bucknall Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 40 </td>
+
+				</tr>
+				<tr>
+					<td> 9252149 </td>
+					<td> Donington on Bain School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 73 </td>
+
+				</tr>
+				<tr>
+					<td> 9252151 </td>
+					<td> Faldingworth Community Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 50 </td>
+
+				</tr>
+				<tr>
+					<td> 9252152 </td>
+					<td> Frithville Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 58 </td>
+
+				</tr>
+				<tr>
+					<td> 9252153 </td>
+					<td> Fulstow Community Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 39 </td>
+
+				</tr>
+				<tr>
+					<td> 9252157 </td>
+					<td> Gipsey Bridge Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 101 </td>
+
+				</tr>
+				<tr>
+					<td> 9252158 </td>
+					<td> Grainthorpe School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 47 </td>
+
+				</tr>
+				<tr>
+					<td> 9252159 </td>
+					<td> Great Steeping Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 103 </td>
+
+				</tr>
+				<tr>
+					<td> 9252161 </td>
+					<td> Hogsthorpe Community Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 69 </td>
+
+				</tr>
+				<tr>
+					<td> 9252162 </td>
+					<td> Holton le Clay Infants School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 109 </td>
+
+				</tr>
+				<tr>
+					<td> 9252166 </td>
+					<td> Ingham Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 114 </td>
+
+				</tr>
+				<tr>
+					<td> 9252168 </td>
+					<td> Keelby Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 183 </td>
+
+				</tr>
+				<tr>
+					<td> 9252169 </td>
+					<td> Legsby Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 33 </td>
+
+				</tr>
+				<tr>
+					<td> 9252170 </td>
+					<td> Louth Eastfield Infants and Nursery School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 311 </td>
+
+				</tr>
+				<tr>
+					<td> 9252171 </td>
+					<td> Louth Kidgate Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 402 </td>
+
+				</tr>
+				<tr>
+					<td> 9252174 </td>
+					<td> Marshchapel Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 42 </td>
+
+				</tr>
+				<tr>
+					<td> 9252175 </td>
+					<td> Marton Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 89 </td>
+
+				</tr>
+				<tr>
+					<td> 9252176 </td>
+					<td> Middle Rasen Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 101 </td>
+
+				</tr>
+				<tr>
+					<td> 9252177 </td>
+					<td> Morton Trentside Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 206 </td>
+
+				</tr>
+				<tr>
+					<td> 9252178 </td>
+					<td> Nettleton Community Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 59 </td>
+
+				</tr>
+				<tr>
+					<td> 9252179 </td>
+					<td> New Leake Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 50 </td>
+
+				</tr>
+				<tr>
+					<td> 9252180 </td>
+					<td> New York Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 48 </td>
+
+				</tr>
+				<tr>
+					<td> 9252181 </td>
+					<td> Normanby by Spital Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 76 </td>
+
+				</tr>
+				<tr>
+					<td> 9252182 </td>
+					<td> Kelsey Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 70 </td>
+
+				</tr>
+				<tr>
+					<td> 9252183 </td>
+					<td> North Thoresby Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 76 </td>
+
+				</tr>
+				<tr>
+					<td> 9252185 </td>
+					<td> Osgodby Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 93 </td>
+
+				</tr>
+				<tr>
+					<td> 9252187 </td>
+					<td> Scampton Pollyplatt Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 155 </td>
+
+				</tr>
+				<tr>
+					<td> 9252188 </td>
+					<td> Scotter Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 268 </td>
+
+				</tr>
+				<tr>
+					<td> 9252190 </td>
+					<td> Skegness Infant School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 324 </td>
+
+				</tr>
+				<tr>
+					<td> 9252191 </td>
+					<td> Skegness Seathorne Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 393 </td>
+
+				</tr>
+				<tr>
+					<td> 9252193 </td>
+					<td> Spilsby Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 189 </td>
+
+				</tr>
+				<tr>
+					<td> 9252195 </td>
+					<td> Sturton by Stow Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 130 </td>
+
+				</tr>
+				<tr>
+					<td> 9252196 </td>
+					<td> Sutton on Sea Community Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 174 </td>
+
+				</tr>
+				<tr>
+					<td> 9252197 </td>
+					<td> Tealby School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 75 </td>
+
+				</tr>
+				<tr>
+					<td> 9252198 </td>
+					<td> Tetford The Edward Richardson Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 118 </td>
+
+				</tr>
+				<tr>
+					<td> 9252199 </td>
+					<td> Tetney Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 134 </td>
+
+				</tr>
+				<tr>
+					<td> 9252201 </td>
+					<td> Toynton All Saints Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 61 </td>
+
+				</tr>
+				<tr>
+					<td> 9252202 </td>
+					<td> Utterby Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 57 </td>
+
+				</tr>
+				<tr>
+					<td> 9252203 </td>
+					<td> Waddingham Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 71 </td>
+
+				</tr>
+				<tr>
+					<td> 9252205 </td>
+					<td> Willoughton Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 40 </td>
+
+				</tr>
+				<tr>
+					<td> 9252206 </td>
+					<td> Wragby Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 175 </td>
+
+				</tr>
+				<tr>
+					<td> 9252207 </td>
+					<td> White's Wood Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Academy </td>
+					<td> 182 </td>
+
+				</tr>
+				<tr>
+					<td> 9252208 </td>
+					<td> Hillcrest Early Years Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 220 </td>
+
+				</tr>
+				<tr>
+					<td> 9252210 </td>
+					<td> Hemswell Cliff Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 83 </td>
+
+				</tr>
+				<tr>
+					<td> 9252214 </td>
+					<td> Gainsborough Charles Baines Community Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 204 </td>
+
+				</tr>
+				<tr>
+					<td> 9252215 </td>
+					<td> The Tattershall Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 131 </td>
+
+				</tr>
+				<tr>
+					<td> 9252219 </td>
+					<td> Skegness The Richmond School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 441 </td>
+
+				</tr>
+				<tr>
+					<td> 9252220 </td>
+					<td> Theddlethorpe Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 73 </td>
+
+				</tr>
+				<tr>
+					<td> 9252224 </td>
+					<td> Ruskington Winchelsea Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 170 </td>
+
+				</tr>
+				<tr>
+					<td> 9252229 </td>
+					<td> Holton Le Clay Junior School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Maintained </td>
+					<td> 141 </td>
+
+				</tr>
+				<tr>
+					<td> 9252232 </td>
+					<td> Deeping St James Linchfield Community Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 383 </td>
+
+				</tr>
+				<tr>
+					<td> 9252234 </td>
+					<td> Boston Carlton Road Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 468 </td>
+
+				</tr>
+				<tr>
+					<td> 9252237 </td>
+					<td> Boston Park Community Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 327 </td>
+
+				</tr>
+				<tr>
+					<td> 9252238 </td>
+					<td> Sutton Bridge Westmere Community Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 223 </td>
+
+				</tr>
+				<tr>
+					<td> 9252239 </td>
+					<td> Boston Staniland Primary and Nursery School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 487 </td>
+
+				</tr>
+				<tr>
+					<td> 9252240 </td>
+					<td> Waddington All Saints Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 364 </td>
+
+				</tr>
+				<tr>
+					<td> 9252241 </td>
+					<td> Cherry Willingham Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 302 </td>
+
+				</tr>
+				<tr>
+					<td> 9252243 </td>
+					<td> Bythams Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 86 </td>
+
+				</tr>
+				<tr>
+					<td> 9252244 </td>
+					<td> Horncastle Community Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 585 </td>
+
+				</tr>
+				<tr>
+					<td> 9252245 </td>
+					<td> Lincoln Birchwood Junior School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Maintained </td>
+					<td> 275 </td>
+
+				</tr>
+				<tr>
+					<td> 9252246 </td>
+					<td> Lincoln Leslie Manser Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 258 </td>
+
+				</tr>
+				<tr>
+					<td> 9252247 </td>
+					<td> Gainsborough Benjamin Adlard Community School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 190 </td>
+
+				</tr>
+				<tr>
+					<td> 9252248 </td>
+					<td> Sleaford St Botolphs CE School Quarrington </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 386 </td>
+
+				</tr>
+				<tr>
+					<td> 9253000 </td>
+					<td> Allington with Sedgebrook CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 112 </td>
+
+				</tr>
+				<tr>
+					<td> 9253001 </td>
+					<td> Ancaster CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 126 </td>
+
+				</tr>
+				<tr>
+					<td> 9253004 </td>
+					<td> Barrowby CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 236 </td>
+
+				</tr>
+				<tr>
+					<td> 9253005 </td>
+					<td> Baston CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 179 </td>
+
+				</tr>
+				<tr>
+					<td> 9253007 </td>
+					<td> Billinghay CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 135 </td>
+
+				</tr>
+				<tr>
+					<td> 9253009 </td>
+					<td> Branston CE Infant School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 98 </td>
+
+				</tr>
+				<tr>
+					<td> 9253015 </td>
+					<td> Coleby CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 74 </td>
+
+				</tr>
+				<tr>
+					<td> 9253017 </td>
+					<td> Denton CE School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 69 </td>
+
+				</tr>
+				<tr>
+					<td> 9253018 </td>
+					<td> Digby CE School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 88 </td>
+
+				</tr>
+				<tr>
+					<td> 9253021 </td>
+					<td> Dunston St Peters CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 92 </td>
+
+				</tr>
+				<tr>
+					<td> 9253022 </td>
+					<td> Edenham CE School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 117 </td>
+
+				</tr>
+				<tr>
+					<td> 9253026 </td>
+					<td> Grantham St Annes CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 200 </td>
+
+				</tr>
+				<tr>
+					<td> 9253027 </td>
+					<td> West Grantham Academy St Johns </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 340 </td>
+
+				</tr>
+				<tr>
+					<td> 9253029 </td>
+					<td> Grantham Gonerby Hill Foot CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 312 </td>
+
+				</tr>
+				<tr>
+					<td> 9253031 </td>
+					<td> Harlaxton CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 189 </td>
+
+				</tr>
+				<tr>
+					<td> 9253033 </td>
+					<td> Heckington St Andrews CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 197 </td>
+
+				</tr>
+				<tr>
+					<td> 9253036 </td>
+					<td> Kirkby la Thorpe CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 122 </td>
+
+				</tr>
+				<tr>
+					<td> 9253037 </td>
+					<td> Leasingham St Andrews CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 190 </td>
+
+				</tr>
+				<tr>
+					<td> 9253040 </td>
+					<td> Long Bennington CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 270 </td>
+
+				</tr>
+				<tr>
+					<td> 9253041 </td>
+					<td> Martin Mrs Mary Kings CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 97 </td>
+
+				</tr>
+				<tr>
+					<td> 9253044 </td>
+					<td> Morton CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 156 </td>
+
+				</tr>
+				<tr>
+					<td> 9253045 </td>
+					<td> Navenby CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 203 </td>
+
+				</tr>
+				<tr>
+					<td> 9253047 </td>
+					<td> North Hykeham All Saints CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 190 </td>
+
+				</tr>
+				<tr>
+					<td> 9253050 </td>
+					<td> Potterhanworth CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 114 </td>
+
+				</tr>
+				<tr>
+					<td> 9253052 </td>
+					<td> Ropsley CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 100 </td>
+
+				</tr>
+				<tr>
+					<td> 9253056 </td>
+					<td> Skellingthorpe St Lawrence CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 154 </td>
+
+				</tr>
+				<tr>
+					<td> 9253066 </td>
+					<td> Swinderby All Saints CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 93 </td>
+
+				</tr>
+				<tr>
+					<td> 9253068 </td>
+					<td> Thorpe on the Hill St Michaels CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 161 </td>
+
+				</tr>
+				<tr>
+					<td> 9253070 </td>
+					<td> Uffington CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 95 </td>
+
+				</tr>
+				<tr>
+					<td> 9253071 </td>
+					<td> Welbourn CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 82 </td>
+
+				</tr>
+				<tr>
+					<td> 9253077 </td>
+					<td> Stamford St Gilberts CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 315 </td>
+
+				</tr>
+				<tr>
+					<td> 9253078 </td>
+					<td> Claypole CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 173 </td>
+
+				</tr>
+				<tr>
+					<td> 9253079 </td>
+					<td> Colsterworth CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 136 </td>
+
+				</tr>
+				<tr>
+					<td> 9253085 </td>
+					<td> Boston St Thomas CE Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 397 </td>
+
+				</tr>
+				<tr>
+					<td> 9253088 </td>
+					<td> Gedney Hill CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 37 </td>
+
+				</tr>
+				<tr>
+					<td> 9253089 </td>
+					<td> Holbeach St Marks CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 37 </td>
+
+				</tr>
+				<tr>
+					<td> 9253091 </td>
+					<td> Pinchbeck East CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 297 </td>
+
+				</tr>
+				<tr>
+					<td> 9253092 </td>
+					<td> Pinchbeck St Bartholomews CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 95 </td>
+
+				</tr>
+				<tr>
+					<td> 9253093 </td>
+					<td> Quadring Cowley and Browns Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 103 </td>
+
+				</tr>
+				<tr>
+					<td> 9253096 </td>
+					<td> Weston Hills CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 147 </td>
+
+				</tr>
+				<tr>
+					<td> 9253097 </td>
+					<td> Whaplode CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 193 </td>
+
+				</tr>
+				<tr>
+					<td> 9253098 </td>
+					<td> Donington Cowley Endowed Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 258 </td>
+
+				</tr>
+				<tr>
+					<td> 9253100 </td>
+					<td> Weston St Mary CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 45 </td>
+
+				</tr>
+				<tr>
+					<td> 9253102 </td>
+					<td> Swineshead St Marys CE Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 248 </td>
+
+				</tr>
+				<tr>
+					<td> 9253103 </td>
+					<td> Sutterton Fourfields CE School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 135 </td>
+
+				</tr>
+				<tr>
+					<td> 9253105 </td>
+					<td> Lincoln St Peter In Eastgate CE Infants school </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 88 </td>
+
+				</tr>
+				<tr>
+					<td> 9253107 </td>
+					<td> Lincoln St Faith and St Martin CE Junior School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Maintained </td>
+					<td> 199 </td>
+
+				</tr>
+				<tr>
+					<td> 9253108 </td>
+					<td> Lincoln St Faiths CE Infant School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 233 </td>
+
+				</tr>
+				<tr>
+					<td> 9253111 </td>
+					<td> Lincoln St Peter at Gowts CE Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 256 </td>
+
+				</tr>
+				<tr>
+					<td> 9253116 </td>
+					<td> Binbrook CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 98 </td>
+
+				</tr>
+				<tr>
+					<td> 9253118 </td>
+					<td> Burgh le Marsh St Peter and St Paul CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 226 </td>
+
+				</tr>
+				<tr>
+					<td> 9253119 </td>
+					<td> Coningsby St Michaels CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 278 </td>
+
+				</tr>
+				<tr>
+					<td> 9253120 </td>
+					<td> Corringham CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 102 </td>
+
+				</tr>
+				<tr>
+					<td> 9253121 </td>
+					<td> Dunholme St Chads CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 176 </td>
+
+				</tr>
+				<tr>
+					<td> 9253122 </td>
+					<td> Fiskerton CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 90 </td>
+
+				</tr>
+				<tr>
+					<td> 9253123 </td>
+					<td> Grasby All Saints CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 78 </td>
+
+				</tr>
+				<tr>
+					<td> 9253124 </td>
+					<td> Hackthorn CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 61 </td>
+
+				</tr>
+				<tr>
+					<td> 9253125 </td>
+					<td> Halton Holegate CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 65 </td>
+
+				</tr>
+				<tr>
+					<td> 9253128 </td>
+					<td> Louth St Michaels CE School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 236 </td>
+
+				</tr>
+				<tr>
+					<td> 9253130 </td>
+					<td> Mareham le Fen CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 82 </td>
+
+				</tr>
+				<tr>
+					<td> 9253131 </td>
+					<td> Market Rasen CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 286 </td>
+
+				</tr>
+				<tr>
+					<td> 9253132 </td>
+					<td> Newton on Trent CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 36 </td>
+
+				</tr>
+				<tr>
+					<td> 9253133 </td>
+					<td> North Cotes CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 72 </td>
+
+				</tr>
+				<tr>
+					<td> 9253134 </td>
+					<td> North Cockerington CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 81 </td>
+
+				</tr>
+				<tr>
+					<td> 9253136 </td>
+					<td> Reepham CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 177 </td>
+
+				</tr>
+				<tr>
+					<td> 9253137 </td>
+					<td> Saltfleetby CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 34 </td>
+
+				</tr>
+				<tr>
+					<td> 9253139 </td>
+					<td> Saxilby CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 284 </td>
+
+				</tr>
+				<tr>
+					<td> 9253140 </td>
+					<td> Scamblesby CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 65 </td>
+
+				</tr>
+				<tr>
+					<td> 9253141 </td>
+					<td> Scampton CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 84 </td>
+
+				</tr>
+				<tr>
+					<td> 9253146 </td>
+					<td> Tattershall Holy Trinity CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 105 </td>
+
+				</tr>
+				<tr>
+					<td> 9253151 </td>
+					<td> Willoughby St Helenas CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 108 </td>
+
+				</tr>
+				<tr>
+					<td> 9253152 </td>
+					<td> Withern St Margarets CE School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 53 </td>
+
+				</tr>
+				<tr>
+					<td> 9253154 </td>
+					<td> Bardney CE and Methodist Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 127 </td>
+
+				</tr>
+				<tr>
+					<td> 9253156 </td>
+					<td> Caistor CE and Methodist Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 269 </td>
+
+				</tr>
+				<tr>
+					<td> 9253158 </td>
+					<td> Welton St Marys CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 381 </td>
+
+				</tr>
+				<tr>
+					<td> 9253162 </td>
+					<td> Boston St Nicholas CE Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 237 </td>
+
+				</tr>
+				<tr>
+					<td> 9253163 </td>
+					<td> Brant Broughton CE and Methodist Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 78 </td>
+
+				</tr>
+				<tr>
+					<td> 9253166 </td>
+					<td> Scothern Ellison Boulters CE Primary Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 282 </td>
+
+				</tr>
+				<tr>
+					<td> 9253167 </td>
+					<td> Holbeach William Stukeley VA Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 260 </td>
+
+				</tr>
+				<tr>
+					<td> 9253168 </td>
+					<td> Legbourne East Wold CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 109 </td>
+
+				</tr>
+				<tr>
+					<td> 9253169 </td>
+					<td> Gainsborough St Georges CE Community Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 173 </td>
+
+				</tr>
+				<tr>
+					<td> 9253170 </td>
+					<td> Sibsey Free Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 179 </td>
+
+				</tr>
+				<tr>
+					<td> 9253171 </td>
+					<td> Stickney CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 168 </td>
+
+				</tr>
+				<tr>
+					<td> 9253308 </td>
+					<td> Grantham The National CE Junior School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Academy </td>
+					<td> 392 </td>
+
+				</tr>
+				<tr>
+					<td> 9253310 </td>
+					<td> Grantham Harrowby CE Infant School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 162 </td>
+
+				</tr>
+				<tr>
+					<td> 9253311 </td>
+					<td> Grantham Little Gonerby CE Infant School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 174 </td>
+
+				</tr>
+				<tr>
+					<td> 9253313 </td>
+					<td> Great Gonerby St Sebastians CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 112 </td>
+
+				</tr>
+				<tr>
+					<td> 9253314 </td>
+					<td> Great Ponton CE School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 66 </td>
+
+				</tr>
+				<tr>
+					<td> 9253317 </td>
+					<td> Horbling Browns CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 74 </td>
+
+				</tr>
+				<tr>
+					<td> 9253319 </td>
+					<td> Leadenham CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 35 </td>
+
+				</tr>
+				<tr>
+					<td> 9253321 </td>
+					<td> Marston Thorolds Charity CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 86 </td>
+
+				</tr>
+				<tr>
+					<td> 9253322 </td>
+					<td> Pointon St Gilbert of Sempringham CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 59 </td>
+
+				</tr>
+				<tr>
+					<td> 9253325 </td>
+					<td> Stamford Saint Georges CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 181 </td>
+
+				</tr>
+				<tr>
+					<td> 9253330 </td>
+					<td> Grantham Saint Marys Catholic Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 208 </td>
+
+				</tr>
+				<tr>
+					<td> 9253331 </td>
+					<td> Sleaford Our Lady of Good Counsel Catholic Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 162 </td>
+
+				</tr>
+				<tr>
+					<td> 9253332 </td>
+					<td> The Saint Augustine's Catholic Primary School, Stamford </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 136 </td>
+
+				</tr>
+				<tr>
+					<td> 9253337 </td>
+					<td> Cowbit St Marys CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 75 </td>
+
+				</tr>
+				<tr>
+					<td> 9253338 </td>
+					<td> Spalding Parish CE Day School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 423 </td>
+
+				</tr>
+				<tr>
+					<td> 9253339 </td>
+					<td> Spalding St John The Baptist CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 432 </td>
+
+				</tr>
+				<tr>
+					<td> 9253340 </td>
+					<td> Tydd St Mary CE Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 103 </td>
+
+				</tr>
+				<tr>
+					<td> 9253342 </td>
+					<td> Boston Saint Marys R C Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 210 </td>
+
+				</tr>
+				<tr>
+					<td> 9253343 </td>
+					<td> Spalding Saint Norberts Catholic Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 197 </td>
+
+				</tr>
+				<tr>
+					<td> 9253346 </td>
+					<td> The Saint Hugh's Catholic Primary School, Lincoln </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 277 </td>
+
+				</tr>
+				<tr>
+					<td> 9253347 </td>
+					<td> Lincoln Our Lady of Lincoln Catholic Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 207 </td>
+
+				</tr>
+				<tr>
+					<td> 9253350 </td>
+					<td> Blyton cum Laughton CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 153 </td>
+
+				</tr>
+				<tr>
+					<td> 9253353 </td>
+					<td> Friskney All Saints Church of England Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 156 </td>
+
+				</tr>
+				<tr>
+					<td> 9253354 </td>
+					<td> The Gainsborough Parish Church Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 294 </td>
+
+				</tr>
+				<tr>
+					<td> 9253359 </td>
+					<td> Kirkby on Bain CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 107 </td>
+
+				</tr>
+				<tr>
+					<td> 9253361 </td>
+					<td> Lea Frances Olive Anderson CE Primary School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 179 </td>
+
+				</tr>
+				<tr>
+					<td> 9253364 </td>
+					<td> Nettleham CE Voluntary Aided Junior School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Maintained </td>
+					<td> 238 </td>
+
+				</tr>
+				<tr>
+					<td> 9253366 </td>
+					<td> Partney CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 67 </td>
+
+				</tr>
+				<tr>
+					<td> 9253505 </td>
+					<td> Lincoln Bishop King CE Community Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 358 </td>
+
+				</tr>
+				<tr>
+					<td> 9253506 </td>
+					<td> Witham St Hughs Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 242 </td>
+
+				</tr>
+				<tr>
+					<td> 9253507 </td>
+					<td> Lincoln The Meadows Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 297 </td>
+
+				</tr>
+				<tr>
+					<td> 9253508 </td>
+					<td> Lincoln Ermine Primary Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 411 </td>
+
+				</tr>
+				<tr>
+					<td> 9253509 </td>
+					<td> Lincoln Chad Varah Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 465 </td>
+
+				</tr>
+				<tr>
+					<td> 9253510 </td>
+					<td> Bourne Abbey Church of England Primary Academy </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 683 </td>
+
+				</tr>
+				<tr>
+					<td> 9254000 </td>
+					<td> The Bourne Academy </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1226 </td>
+
+				</tr>
+				<tr>
+					<td> 9254001 </td>
+					<td> University Academy Holbeach </td>
+					<td> South Holland District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1205 </td>
+
+				</tr>
+				<tr>
+					<td> 9254002 </td>
+					<td> Spilsby The King Edward VI Humanities College </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 426 </td>
+
+				</tr>
+				<tr>
+					<td> 9254003 </td>
+					<td> Cordeaux Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 556 </td>
+
+				</tr>
+				<tr>
+					<td> 9254004 </td>
+					<td> Grantham Kesteven and Grantham Girls School </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1203 </td>
+
+				</tr>
+				<tr>
+					<td> 9254005 </td>
+					<td> Sleaford Kesteven and Sleaford High School </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 788 </td>
+
+				</tr>
+				<tr>
+					<td> 9254010 </td>
+					<td> Deepings School </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1496 </td>
+
+				</tr>
+				<tr>
+					<td> 9254017 </td>
+					<td> West Grantham Academy Charles Read High </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 158 </td>
+
+				</tr>
+				<tr>
+					<td> 9254019 </td>
+					<td> Grantham The Walton Girls High School Academy </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 793 </td>
+
+				</tr>
+				<tr>
+					<td> 9254022 </td>
+					<td> Boston High School </td>
+					<td> Boston Borough Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 685 </td>
+
+				</tr>
+				<tr>
+					<td> 9254027 </td>
+					<td> Spalding High School </td>
+					<td> South Holland District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 958 </td>
+
+				</tr>
+				<tr>
+					<td> 9254028 </td>
+					<td> Kirton Middlecott School </td>
+					<td> Boston Borough Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 479 </td>
+
+				</tr>
+				<tr>
+					<td> 9254030 </td>
+					<td> Long Sutton The Peele School </td>
+					<td> South Holland District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 668 </td>
+
+				</tr>
+				<tr>
+					<td> 9254048 </td>
+					<td> Alford John Spendluffe Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 556 </td>
+
+				</tr>
+				<tr>
+					<td> 9254049 </td>
+					<td> Caistor Yarborough Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 430 </td>
+
+				</tr>
+				<tr>
+					<td> 9254050 </td>
+					<td> Horncastle Banovallum School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 627 </td>
+
+				</tr>
+				<tr>
+					<td> 9254061 </td>
+					<td> North Somercotes The Birkbeck School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 287 </td>
+
+				</tr>
+				<tr>
+					<td> 9254062 </td>
+					<td> Cherry Willingham Community School </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 389 </td>
+
+				</tr>
+				<tr>
+					<td> 9254065 </td>
+					<td> Gainsborough Queen Elizabeths High School </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 1215 </td>
+
+				</tr>
+				<tr>
+					<td> 9254067 </td>
+					<td> Stamford Queen Eleanor Technology College </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 404 </td>
+
+				</tr>
+				<tr>
+					<td> 9254072 </td>
+					<td> Boston The Haven High Technology College </td>
+					<td> Boston Borough Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1143 </td>
+
+				</tr>
+				<tr>
+					<td> 9254501 </td>
+					<td> Bourne Grammar School </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1116 </td>
+
+				</tr>
+				<tr>
+					<td> 9254507 </td>
+					<td> Donington The Thomas Cowley High School </td>
+					<td> South Holland District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 637 </td>
+
+				</tr>
+				<tr>
+					<td> 9254514 </td>
+					<td> Market Rasen De Aston Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 899 </td>
+
+				</tr>
+				<tr>
+					<td> 9254516 </td>
+					<td> William Lovell Church of England School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 438 </td>
+
+				</tr>
+				<tr>
+					<td> 9254603 </td>
+					<td> Spalding Grammar School </td>
+					<td> South Holland District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 978 </td>
+
+				</tr>
+				<tr>
+					<td> 9255202 </td>
+					<td> Rauceby School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 180 </td>
+
+				</tr>
+				<tr>
+					<td> 9255203 </td>
+					<td> Sleaford The William Alvey CE School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 570 </td>
+
+				</tr>
+				<tr>
+					<td> 9255205 </td>
+					<td> Stamford The Malcolm Sargent Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 532 </td>
+
+				</tr>
+				<tr>
+					<td> 9255206 </td>
+					<td> Louth Lacey Gardens Junior School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Maintained </td>
+					<td> 280 </td>
+
+				</tr>
+				<tr>
+					<td> 9255207 </td>
+					<td> Cranwell Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 323 </td>
+
+				</tr>
+				<tr>
+					<td> 9255208 </td>
+					<td> Woodhall Spa St Andrews CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 266 </td>
+
+				</tr>
+				<tr>
+					<td> 9255209 </td>
+					<td> Huttoft Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 165 </td>
+
+				</tr>
+				<tr>
+					<td> 9255210 </td>
+					<td> Chapel St Leonards Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 186 </td>
+
+				</tr>
+				<tr>
+					<td> 9255211 </td>
+					<td> Spalding Primary School </td>
+					<td> South Holland District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 469 </td>
+
+				</tr>
+				<tr>
+					<td> 9255212 </td>
+					<td> Washingborough Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 294 </td>
+
+				</tr>
+				<tr>
+					<td> 9255213 </td>
+					<td> Grantham The Isaac Newton Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 318 </td>
+
+				</tr>
+				<tr>
+					<td> 9255214 </td>
+					<td> Wyberton Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 209 </td>
+
+				</tr>
+				<tr>
+					<td> 9255215 </td>
+					<td> Old Leake Primary and Nursery School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 211 </td>
+
+				</tr>
+				<tr>
+					<td> 9255216 </td>
+					<td> Butterwick Pinchbecks Endowed CE Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 317 </td>
+
+				</tr>
+				<tr>
+					<td> 9255217 </td>
+					<td> Grimoldby Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 204 </td>
+
+				</tr>
+				<tr>
+					<td> 9255218 </td>
+					<td> Wrangle Primary School </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 71 </td>
+
+				</tr>
+				<tr>
+					<td> 9255219 </td>
+					<td> Lincoln The Lancaster School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Maintained </td>
+					<td> 152 </td>
+
+				</tr>
+				<tr>
+					<td> 9255220 </td>
+					<td> Lincoln Hartsholme Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 379 </td>
+
+				</tr>
+				<tr>
+					<td> 9255221 </td>
+					<td> Boston Tower Road Academy </td>
+					<td> Boston Borough Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 622 </td>
+
+				</tr>
+				<tr>
+					<td> 9255222 </td>
+					<td> Barkston and Syston CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 106 </td>
+
+				</tr>
+				<tr>
+					<td> 9255223 </td>
+					<td> Nettleham Infant School </td>
+					<td> West Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 177 </td>
+
+				</tr>
+				<tr>
+					<td> 9255224 </td>
+					<td> Lincoln Westgate Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Junior </td>
+					<td> Academy </td>
+					<td> 427 </td>
+
+				</tr>
+				<tr>
+					<td> 9255225 </td>
+					<td> North Somercotes CE Primary School </td>
+					<td> East Lindsey District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 160 </td>
+
+				</tr>
+				<tr>
+					<td> 9255226 </td>
+					<td> Ruskington Chestnut Street CE Primary School </td>
+					<td> North Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Academy </td>
+					<td> 286 </td>
+
+				</tr>
+				<tr>
+					<td> 9255227 </td>
+					<td> Lincoln Mount Street Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Primary </td>
+					<td> Infant </td>
+					<td> Academy </td>
+					<td> 351 </td>
+
+				</tr>
+				<tr>
+					<td> 9255228 </td>
+					<td> Market Deeping William Hildyard CE Primary School </td>
+					<td> South Kesteven District Council </td>
+					<td> Primary </td>
+					<td> Primary </td>
+					<td> Maintained </td>
+					<td> 236 </td>
+
+				</tr>
+				<tr>
+					<td> 9255400 </td>
+					<td> Skegness Grammar School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 568 </td>
+
+				</tr>
+				<tr>
+					<td> 9255401 </td>
+					<td> Queen Elizabeths Grammar School a selective Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 567 </td>
+
+				</tr>
+				<tr>
+					<td> 9255402 </td>
+					<td> Grantham The Kings School a Selective Academy </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1014 </td>
+
+				</tr>
+				<tr>
+					<td> 9255403 </td>
+					<td> Sleaford Carre’s Grammar School A Selective Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 812 </td>
+
+				</tr>
+				<tr>
+					<td> 9255405 </td>
+					<td> Louth King Edward VI Grammar School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 804 </td>
+
+				</tr>
+				<tr>
+					<td> 9255406 </td>
+					<td> Caistor Grammar School Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 652 </td>
+
+				</tr>
+				<tr>
+					<td> 9255407 </td>
+					<td> Lincoln Castle Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 801 </td>
+
+				</tr>
+				<tr>
+					<td> 9255408 </td>
+					<td> Lincoln Christs Hospital Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1349 </td>
+
+				</tr>
+				<tr>
+					<td> 9255409 </td>
+					<td> Tattershall Gartree Community School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 324 </td>
+
+				</tr>
+				<tr>
+					<td> 9255411 </td>
+					<td> Horncastle Queen Elizabeths Grammar School </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 801 </td>
+
+				</tr>
+				<tr>
+					<td> 9255412 </td>
+					<td> North Hykeham North Kesteven Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1364 </td>
+
+				</tr>
+				<tr>
+					<td> 9255413 </td>
+					<td> North Hykeham Robert Pattinson Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1226 </td>
+
+				</tr>
+				<tr>
+					<td> 9255415 </td>
+					<td> William Farr C of E Comprehensive School Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1485 </td>
+
+				</tr>
+				<tr>
+					<td> 9255416 </td>
+					<td> Sir John Gleed School </td>
+					<td> South Holland District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1444 </td>
+
+				</tr>
+				<tr>
+					<td> 9255417 </td>
+					<td> Louth Monks Dyke Tennyson College </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Maintained </td>
+					<td> 922 </td>
+
+				</tr>
+				<tr>
+					<td> 9255418 </td>
+					<td> Branston Community Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1050 </td>
+
+				</tr>
+				<tr>
+					<td> 9255420 </td>
+					<td> Sir William Robertson Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 798 </td>
+
+				</tr>
+				<tr>
+					<td> 9255421 </td>
+					<td> Saint Peter and Saint Paul, Lincoln's Catholic High School, A Science College </td>
+					<td> Lincoln City Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 557 </td>
+
+				</tr>
+				<tr>
+					<td> 9255422 </td>
+					<td> West Grantham Academy St Hughs College </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 532 </td>
+
+				</tr>
+				<tr>
+					<td> 9255423 </td>
+					<td> The Giles Academy </td>
+					<td> Boston Borough Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 922 </td>
+
+				</tr>
+				<tr>
+					<td> 9255424 </td>
+					<td> Boston Grammar School </td>
+					<td> Boston Borough Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 525 </td>
+
+				</tr>
+				<tr>
+					<td> 9256905 </td>
+					<td> Lincoln The Priory Witham Academy </td>
+					<td> Lincoln City Council </td>
+					<td> All Age </td>
+					<td> All Age </td>
+					<td> Academy </td>
+					<td> 969 </td>
+
+				</tr>
+				<tr>
+					<td> 9256906 </td>
+					<td> Lincoln The Priory City of Lincoln Academy </td>
+					<td> Lincoln City Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 730 </td>
+
+				</tr>
+				<tr>
+					<td> 9256907 </td>
+					<td> Lincoln The Priory Academy LSST </td>
+					<td> Lincoln City Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1878 </td>
+
+				</tr>
+				<tr>
+					<td> 9256908 </td>
+					<td> The Gainsborough Academy </td>
+					<td> West Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 859 </td>
+
+				</tr>
+				<tr>
+					<td> 9256909 </td>
+					<td> St Georges Academy </td>
+					<td> North Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 2195 </td>
+
+				</tr>
+				<tr>
+					<td> 9256910 </td>
+					<td> Priory Ruskin Academy </td>
+					<td> South Kesteven District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1021 </td>
+
+				</tr>
+				<tr>
+					<td> 9256911 </td>
+					<td> Skegness Academy </td>
+					<td> East Lindsey District Council </td>
+					<td> Secondary </td>
+					<td> Secondary </td>
+					<td> Academy </td>
+					<td> 1180 </td>
+
+				</tr>
+				<tr>
+					<td> 9257002 </td>
+					<td> Grantham Ambergate School </td>
+					<td> South Kesteven District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 120 </td>
+
+				</tr>
+				<tr>
+					<td> 9257003 </td>
+					<td> South Rauceby The Ash Villa School </td>
+					<td> North Kesteven District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 13 </td>
+
+				</tr>
+				<tr>
+					<td> 9257005 </td>
+					<td> Grantham Sandon School </td>
+					<td> South Kesteven District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 75 </td>
+
+				</tr>
+				<tr>
+					<td> 9257008 </td>
+					<td> Gosberton House School </td>
+					<td> South Holland District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 94 </td>
+
+				</tr>
+				<tr>
+					<td> 9257009 </td>
+					<td> Spalding The Priory School </td>
+					<td> South Holland District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 131 </td>
+
+				</tr>
+				<tr>
+					<td> 9257010 </td>
+					<td> Boston John Fielding School </td>
+					<td> Boston Borough Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 46 </td>
+
+				</tr>
+				<tr>
+					<td> 9257011 </td>
+					<td> Spalding The Garth School </td>
+					<td> South Holland District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 45 </td>
+
+				</tr>
+				<tr>
+					<td> 9257012 </td>
+					<td> Boston The Pilgrim School </td>
+					<td> Countywide </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 105 </td>
+
+				</tr>
+				<tr>
+					<td> 9257015 </td>
+					<td> Lincoln St Christophers School </td>
+					<td> Lincoln City Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 265 </td>
+
+				</tr>
+				<tr>
+					<td> 9257016 </td>
+					<td> Lincoln St Francis Special School </td>
+					<td> Lincoln City Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 142 </td>
+
+				</tr>
+				<tr>
+					<td> 9257017 </td>
+					<td> Lincoln Queens Park School </td>
+					<td> Lincoln City Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> &nbsp; </td>
+
+				</tr>
+				<tr>
+					<td> 9257021 </td>
+					<td> Horncastle St Lawrence School </td>
+					<td> East Lindsey District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 137 </td>
+
+				</tr>
+				<tr>
+					<td> 9257024 </td>
+					<td> The Eresby School, Spilsby </td>
+					<td> East Lindsey District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Academy </td>
+					<td> 57 </td>
+
+				</tr>
+				<tr>
+					<td> 9257025 </td>
+					<td> Louth St Bernards School </td>
+					<td> East Lindsey District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 51 </td>
+
+				</tr>
+				<tr>
+					<td> 9257028 </td>
+					<td> Bourne Willoughby School </td>
+					<td> South Kesteven District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 74 </td>
+
+				</tr>
+				<tr>
+					<td> 9257029 </td>
+					<td> Grantham The Phoenix School </td>
+					<td> South Kesteven District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Academy </td>
+					<td> 57 </td>
+
+				</tr>
+				<tr>
+					<td> 9257030 </td>
+					<td> Spilsby The Lady Jane Franklin School </td>
+					<td> East Lindsey District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 51 </td>
+
+				</tr>
+				<tr>
+					<td> 9257031 </td>
+					<td> Lincoln The Fortuna Primary School </td>
+					<td> Lincoln City Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 63 </td>
+
+				</tr>
+				<tr>
+					<td> 9257032 </td>
+					<td> Lincoln The Sincil School </td>
+					<td> Lincoln City Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 57 </td>
+
+				</tr>
+				<tr>
+					<td> 9257033 </td>
+					<td> Gainsborough Warren Wood Community School </td>
+					<td> West Lindsey District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 57 </td>
+
+				</tr>
+				<tr>
+					<td> 9257034 </td>
+					<td> Gainsborough The Aegir Community School </td>
+					<td> West Lindsey District Council </td>
+					<td> Special </td>
+					<td> Special </td>
+					<td> Maintained </td>
+					<td> 126 </td>
+
+				</tr>
+
+			</tbody>
+
+		</table>
+
 	</body>
 </html>
