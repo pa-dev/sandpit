@@ -5,20 +5,46 @@
 		<script src="js/d3.min.js"></script>
 		<script src="js/dimple.v2.1.0.min.js"></script>
 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+
 		<style>
-		body{
-			font: 1em sans-serif;
-			color: #555;
-		}
-		h3{
-			margin: 5px;
-			font-size: 90%;
-			
-		}
-			.chartgroup{
-				box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
-				width: 450px;
+			body {
+				font: 1em "roboto condensed", sans-serif;
+				color: #555;
+				background: #555;
 			}
+			svg * {
+				font: 0.9em "roboto condensed" !important;
+			}
+			h3 {
+				margin: 0;
+				padding-top: 10px;
+				font-size: 140%;
+				font-weight: normal;
+				text-align: center;
+				color: #ff5722;
+			}
+
+			h4 {
+				margin: 0;
+				text-align: center;
+				font-weight: normal;
+				font-size: 90%;
+				color: #ff6e40;
+			}
+
+			h3, h4 {
+				text-align: left;
+				margin-left: 20px;
+			}
+			.chartgroup {
+				margin-top: 5px;
+				box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+				width: 900px;
+				/*background: #efefef;*/
+			}
+
 			svg .dimple-bar, svg .dimple-axis, svg .domain {
 				shape-rendering: crispEdges;
 			}
@@ -33,23 +59,130 @@
 				fill: #03a9f4;
 				stroke: none;
 			}
+
+			.chartgroup.economy {
+				background: #03a9f4;
+			}
+			.chartgroup.labour {
+				background: #8bc34a;
+			}
+			.chartgroup.housing {
+				background: #9c27b0;
+			}
+
+			.chartdetail {
+				background: #fff;
+				width: 450px;
+			}
+
+			.chartsummary {
+				float: right;
+				width: 400px;
+				height: 250px;
+				color: #fff;
+				padding: 5px;
+			}
+
+			.chartsummary h3 {
+				color: #fff;
+				margin: 0;
+				padding: 0;
+				font-size: 180%;
+			}
+			.bigwrapper {
+				display: table;
+				width: 100px;
+				height: 100px;
+				background: #fff;
+				border-radius: 100px;
+			}
+
+			.big {
+				color: #ff5722;
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				font-size: 35px
+			}
 		</style>
 	</head>
 
 	<body>
-		<div class="chartgroup">
-			<h3>National Overview</h3>
-			<div id="chart-gdp"></div>
-			<div id="chart-inf"></div>
+		<div class="chartgroup economy">
+
+			<div class="chartsummary">
+				<h3>Economy</h3>
+				<p>
+					GDP Quarterly Change
+				</p>
+				<div class="bigwrapper">
+					<div class="big">
+						+0.8%
+					</div>
+				</div>
+			</div>
+
+			<div class="chartdetail">
+				<h3>Gross Domestic Product</h3>
+				<h4>Percentage Quarterly Change</h4>
+				<div id="chart-gdp"></div>
+				<h3>Inflation</h3>
+				<h4>Percentage Annual Change</h4>
+				<div id="chart-inf"></div>
+			</div>
+
 		</div>
-		<div class="chartgroup">
-			<h3>Labour Market</h3>
-			<div id="chart-cr"></div>
-			<div id="chart-claimant"></div>
+		<div class="chartgroup labour">
+
+			<div class="chartsummary">
+				<h3>Labour Market</h3>
+				<p>
+					JSA Claimant Rate
+				</p>
+				<div class="bigwrapper">
+					<div class="big">
+						2.1
+					</div>
+				</div>
+			</div>
+			<div class="chartdetail">
+				<h3>JSA Claimants</h3>
+				<h4>Claimant Rate: All</h4>
+				<div id="chart-cr"></div>
+				<h4>Claimant Count: All</h4>
+				<div id="chart-claimant"></div>
+
+				<!--<h3>JSA Claimants 6+ Months</h3>-->
+				<h4>Claimant Rate: Claiming for Over 6 Months</h4>
+				<div id="chart-cr6"></div>
+				<h4>Claimant Count: Claiming for Over 6 Months</h4>
+				<div id="chart-claimant6"></div>
+
+				<!--<h3>JSA Claimants Age 17 to 24</h3>-->
+				<h4>Claimant Rate: Age 17 to 24</h4>
+				<div id="chart-crY"></div>
+				<h4>Claimant Count: Age 17 to 24</h4>
+				<div id="chart-claimantY"></div>
+			</div>
 		</div>
-		<div class="chartgroup">
-			<h3>Housing</h3>
-			<div id="chart-hp"></div>
+		<div class="chartgroup housing">
+
+			<div class="chartsummary">
+				<h3>Housing</h3>
+				<p>
+					Monthly House Price Change
+				</p>
+				<div class="bigwrapper">
+					<div class="big">
+						+1.1%
+					</div>
+				</div>
+			</div>
+			<div class="chartdetail">
+				<h3>Housing</h3>
+				<h4>Average House Price</h4>
+				<div id="chart-hp"></div>
+			</div>
 		</div>
 		<script type="text/javascript">
 			gdat = {};
@@ -59,18 +192,35 @@
 				h : 120
 			};
 			var margins = {
-				left : 50,
+				left : 40,
 				top : 20,
-				right : size.w - 70,
+				right : size.w - 60,
 				bottom : size.h - 40
 			};
 			var colours = [new dimple.color("#40c4ff", "#03a9f4", trans)];
+			// just blue
 			//var colours = [new dimple.color("#03a9f4", "#03a9f4", trans)];
 			//var colours = [new dimple.color("#40c4ff", "#40c4ff", trans)];
-			var colours_multi = [new dimple.color("#40c4ff", "#03a9f4", trans), new dimple.color("#ffab40", "#ff9800", trans)];
+			//var colours_multi = [new dimple.color("#40c4ff", "#03a9f4", trans), new dimple.color("#ffab40", "#ff9800", trans)];
+
+			var colours_multi = [new dimple.color("#40c4ff", "#03a9f4", trans), new dimple.color("#ff9800", null, trans)];
+			// for UK vs Lincs comparison
+			var colours_multi2 = [new dimple.color("#e040fb", null, trans), new dimple.color("#259b24", null, trans)];
+			// for various line charts
+			var coloursL = [new dimple.color("#ff9800", null, trans)];
+			// for Lincs only
+
 			var parseDate = d3.time.format("%d-%m-%Y").parse, svg_gdp = dimple.newSvg("#chart-gdp", size.w, size.h);
+
 			var svg_claimant = dimple.newSvg("#chart-claimant", size.w, size.h);
 			var svg_cr = dimple.newSvg("#chart-cr", size.w, size.h);
+
+			var svg_claimant6 = dimple.newSvg("#chart-claimant6", size.w, size.h);
+			var svg_cr6 = dimple.newSvg("#chart-cr6", size.w, size.h);
+
+			var svg_claimantY = dimple.newSvg("#chart-claimantY", size.w, size.h);
+			var svg_crY = dimple.newSvg("#chart-crY", size.w, size.h);
+
 			var svg_hp = dimple.newSvg("#chart-hp", size.w, size.h);
 			var svg_inf = dimple.newSvg("#chart-inf", size.w, size.h);
 
@@ -93,11 +243,15 @@
 				x_gdp.timeInterval = 1;
 				console.log(x_gdp);
 				var y_gdp = chart_gdp.addMeasureAxis("y", "Quarterly % Change");
-				y_gdp.tickFormat = "+p";
+				y_gdp.tickFormat = "+.1p";
 				y_gdp.ticks = 5;
 				chart_gdp.addSeries(["Quarter"], dimple.plot.bar);
 				chart_gdp.defaultColors = colours;
 				chart_gdp.draw();
+				y_gdp.titleShape.remove();
+				x_gdp.titleShape.remove();
+				//x_gdp.shapes.selectAll("text").attr("fill", "#555555");
+				//y_gdp.shapes.selectAll("text").attr("fill", "#555555");
 
 				/*
 				 * inflation chart
@@ -110,12 +264,16 @@
 				x_inf.timePeriod = d3.time.years;
 				x_inf.timeInterval = 1;
 				var y_inf = chart_inf.addMeasureAxis("y", "Inflation Annual % Change");
+				y_inf.tickFormat = "+p";
 				y_inf.ticks = 5;
 				chart_inf.addSeries("Indicator", dimple.plot.line);
-				chart_inf.defaultColors = colours_multi;
-				chart_inf.addLegend(60, size.h - 40, 500, 20, "left");
+				chart_inf.defaultColors = colours_multi2;
+				chart_inf.addLegend(70, size.h - 35, 500, 20, "left");
 				chart_inf.draw();
+				y_inf.titleShape.remove();
+				x_inf.titleShape.remove();
 				x_inf.tickFormat = "%b %Y";
+				y_inf.tickFormat = "+.2p";
 
 				/*
 				 * claimant chart
@@ -128,10 +286,15 @@
 				x_claimant.timePeriod = d3.time.years;
 				x_claimant.timeInterval = 1;
 				var y_claimant = chart_claimant.addMeasureAxis("y", "Claimants");
-				chart_claimant.addSeries(null, dimple.plot.area);
-				chart_claimant.defaultColors = colours;
+				y_claimant.ticks = 5;
+				chart_claimant.addSeries("Area", dimple.plot.area);
+				chart_claimant.defaultColors = coloursL;
+				chart_claimant.addLegend(70, 20, 500, 20, "left");
 				chart_claimant.draw();
+				y_claimant.titleShape.remove();
+				x_claimant.titleShape.remove();
 				x_claimant.tickFormat = "%b %Y";
+				y_claimant.tickFormat = ",f0";
 
 				/*
 				 * claimant rate comparison chart
@@ -144,11 +307,96 @@
 				x_cr.timePeriod = d3.time.years;
 				x_cr.timeInterval = 1;
 				var y_cr = chart_cr.addMeasureAxis("y", "Claimant Rate");
+				y_cr.ticks = 5;
 				chart_cr.addSeries("Area", dimple.plot.line);
 				chart_cr.defaultColors = colours_multi;
-				chart_cr.addLegend(60, size.h - 40, 500, 20, "left");
+				chart_cr.addLegend(70, size.h - 35, 500, 20, "left");
 				chart_cr.draw();
+				y_cr.titleShape.remove();
+				x_cr.titleShape.remove();
 				x_cr.tickFormat = "%b %Y";
+
+				/*
+				 * claimant 6 months chart
+				 */
+				var data_claimant6 = dimple.filterData(data, "Area", ["Lincolnshire"]);
+				var chart_claimant6 = new dimple.chart(svg_claimant6, data_claimant6);
+				chart_claimant6.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_claimant6 = chart_claimant6.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_claimant6.showGridlines = true;
+				x_claimant6.timePeriod = d3.time.years;
+				x_claimant6.timeInterval = 1;
+				var y_claimant6 = chart_claimant6.addMeasureAxis("y", "Claimants 6+ Months");
+				y_claimant6.ticks = 5;
+				chart_claimant6.addSeries("Area", dimple.plot.area);
+				chart_claimant6.defaultColors = coloursL;
+				chart_claimant6.addLegend(70, 20, 500, 20, "left");
+				chart_claimant6.draw();
+				y_claimant6.titleShape.remove();
+				x_claimant6.titleShape.remove();
+				x_claimant6.tickFormat = "%b %Y";
+				y_claimant6.tickFormat = ",f0";
+
+				/*
+				 * claimant rate 6 months comparison chart
+				 */
+				var data_cr6 = dimple.filterData(data, "Area", ["Lincolnshire", "UK"]);
+				var chart_cr6 = new dimple.chart(svg_cr6, data_cr6);
+				chart_cr6.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_cr6 = chart_cr6.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_cr6.showGridlines = true;
+				x_cr6.timePeriod = d3.time.years;
+				x_cr6.timeInterval = 1;
+				var y_cr6 = chart_cr6.addMeasureAxis("y", "Claimant Rate 6+ Months");
+				y_cr6.ticks = 5;
+				chart_cr6.addSeries("Area", dimple.plot.line);
+				chart_cr6.defaultColors = colours_multi;
+				chart_cr6.addLegend(70, 20, 500, 20, "left");
+				chart_cr6.draw();
+				y_cr6.titleShape.remove();
+				x_cr6.titleShape.remove();
+				x_cr6.tickFormat = "%b %Y";
+
+				/*
+				 * claimant young 17-24 chart
+				 */
+				var data_claimantY = dimple.filterData(data, "Area", ["Lincolnshire"]);
+				var chart_claimantY = new dimple.chart(svg_claimantY, data_claimantY);
+				chart_claimantY.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_claimantY = chart_claimantY.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_claimantY.showGridlines = true;
+				x_claimantY.timePeriod = d3.time.years;
+				x_claimantY.timeInterval = 1;
+				var y_claimantY = chart_claimantY.addMeasureAxis("y", "Claimants 17-24");
+				y_claimantY.ticks = 5;
+				chart_claimantY.addSeries("Area", dimple.plot.area);
+				chart_claimantY.defaultColors = coloursL;
+				chart_claimantY.addLegend(70, 20, 500, 20, "left");
+				chart_claimantY.draw();
+				y_claimantY.titleShape.remove();
+				x_claimantY.titleShape.remove();
+				x_claimantY.tickFormat = "%b %Y";
+				y_claimantY.tickFormat = ",f0";
+
+				/*
+				 * claimant young 17-24 comparison chart
+				 */
+				var data_crY = dimple.filterData(data, "Area", ["Lincolnshire", "UK"]);
+				var chart_crY = new dimple.chart(svg_crY, data_crY);
+				chart_crY.setBounds(margins.left, margins.top, margins.right, margins.bottom);
+				var x_crY = chart_crY.addTimeAxis("x", "Date", "%d/%m/%Y", "%Y");
+				x_crY.showGridlines = true;
+				x_crY.timePeriod = d3.time.years;
+				x_crY.timeInterval = 1;
+				var y_crY = chart_crY.addMeasureAxis("y", "Claimant Rate 17-24");
+				y_crY.ticks = 5;
+				chart_crY.addSeries("Area", dimple.plot.line);
+				chart_crY.defaultColors = colours_multi;
+				chart_crY.addLegend(70, 20, 500, 20, "left");
+				chart_crY.draw();
+				y_crY.titleShape.remove();
+				x_crY.titleShape.remove();
+				x_crY.tickFormat = "%b %Y";
 
 				/*
 				 * house price chart
@@ -161,10 +409,15 @@
 				x_hp.timePeriod = d3.time.years;
 				x_hp.timeInterval = 1;
 				var y_hp = chart_hp.addMeasureAxis("y", "Average House Price GBP");
-				chart_hp.addSeries(null, dimple.plot.area);
-				chart_hp.defaultColors = colours;
+				y_hp.ticks = 5;
+				chart_hp.addSeries("Area", dimple.plot.line);
+				chart_hp.defaultColors = coloursL;
+				chart_hp.addLegend(70, 10, 500, 20, "left");
 				chart_hp.draw();
+				y_hp.titleShape.remove();
+				x_hp.titleShape.remove();
 				x_hp.tickFormat = "%b %Y";
+				y_hp.tickFormat = ",f0";
 
 			});
 		</script>
